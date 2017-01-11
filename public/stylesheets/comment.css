@@ -1,0 +1,44 @@
+/*评论区*/
+/*输入评论区*/
+.myComment{
+    margin-bottom:30px;
+}
+.inputComment{
+    min-height:30px;
+    margin:5px 0px;
+    background:#fff;
+}
+.myComment button{
+    float:right;
+    width:3.3em;
+    height:2em;
+    line-height:1.2em;
+    padding:0;
+}
+/*查看过往评论*/
+.comment-list,
+.reply-list{
+    margin-bottom:15px;
+}
+.reply-list{
+    margin-left:30px;
+}
+.comment-list img,
+.reply-list img{
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    margin-right:10px;
+}
+.comment-list strong,
+.reply-list strong{
+    font-size:14px;
+}
+.comment-list p,
+.reply-list p {
+    margin-left: 40px;
+    text-indent: 2em;
+    margin-top: -10px;
+    font-size: 14px;
+    line-height: 16px;
+}

@@ -1,0 +1,14 @@
+//
+   Created by Dida on 2016/12/21.
+extend ../layout
+
+block append style
+    link(rel="stylesheet",href="/stylesheets/knowledgeSystem.css")
+
+block content
+    .artical
+        -var articals=[{title:"线性表",content:["概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1概念的内容1","概念的内容2"]}];
+        each act in articals
+            h3.artical-title #{act.title}
+            each item in act.content
+                p #{item}

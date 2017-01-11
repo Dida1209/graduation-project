@@ -1,0 +1,120 @@
+.head{
+    width:100%;
+    min-width:1180px;
+    font-size:14px;
+    background:#1e3034;
+    height:5em;
+}
+/**/
+.logo,
+.resource,
+.login-block{
+    float:left;
+    height:4em;
+    line-height:4em;
+    margin:.5em;
+}
+.logo{
+    margin-left: 7em;
+    width:7em;
+}
+.logo img{
+    width:100%;
+    height:100%;
+}
+/**/
+.resource{
+    margin-left:8em;
+    font-weight: bolder;
+}
+.resource > div {
+    float:left;
+    width:11em;
+    border: 1px solid #1e3034;
+    border-radius: 2em;
+    font-size: 1.2em;
+    text-align: center;
+    color:#ecf0f1;
+    cursor: pointer;
+    letter-spacing:5px;
+}
+.resource > div:hover{
+    background: rgba(255,255,255,0.1);
+}
+.video > span:nth-child(1),
+.document > span:nth-child(1),
+.onlineTest > span:nth-child(1){
+    width: 3em;
+    height:1.5em;
+    display: inline-block;
+    vertical-align: sub;
+}
+.resource > div.active{
+    color: #ffaeae;
+}
+.video > span:nth-child(1){
+    background:url('/img/video.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+.document > span:nth-child(1){
+    background:url('/img/document.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+.onlineTest > span:nth-child(1){
+    background:url('/img/onlineTest.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+.video.active > span:nth-child(1){
+    background:url('/img/video-active.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+.document.active > span:nth-child(1){
+    background:url('/img/document-active.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+.onlineTest.active > span:nth-child(1){
+    background:url('/img/onlineTest-active.svg') no-repeat;
+    background-position: top center;
+    background-size: 1.5em;
+}
+/**/
+.login-block {
+    float: right;
+    margin-right: 7em;
+}
+.login-block a,
+.login-block span{
+    display: inline-block;
+    float: left;
+    width:2.5em;
+    font-size: 1.2em;
+    text-align: center;
+    color:#ecf0f1;
+    cursor: pointer;
+}
+.login-block span{
+    cursor: none;
+}
+/**/
+.modal-dialog{
+    width:360px;
+    margin-top:180px;
+}
+/*#signupModal.modal-header,*/
+/*#signinModal.modal-header{*/
+    /*text-align: center;*/
+    /*color: #ecf0f1;*/
+    /*background: #337ab7;*/
+    /*font-size: 16px;*/
+    /*font-weight:bolder;*/
+/*}*/
+/*#signupModal.modal-header{*/
+    /*background: #5cb85c;*/
+/*}*/
+
+

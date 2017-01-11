@@ -1,0 +1,82 @@
+#test{
+    float:left;
+    margin-left:15px;
+    font-size:16px;
+}
+/*题目*/
+#question,
+#Title{
+    background:#f8f8f8;
+    width:860px;
+    padding:20px 25px;
+    border-radius:5px;
+}
+#question{
+    margin-top:-5px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+}
+.answer{
+    margin-top:20px;
+    height:30px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.answer.is-active{
+    height:auto;
+}
+.ans-content{
+    display:none;
+}
+.testComment{
+    display:none;
+}
+.ans-content.is-active,
+.testComment.is-active{
+    display:block;
+}
+
+#question > span,
+.answer > span{
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    font-weight:bold;
+    color:#3b9ad8;
+}
+.answer > span:nth-child(2){
+    float:right;
+    margin-right:100px;
+}
+
+.ques-content{
+    font-weight:600;
+}
+.ques-content,
+.ans-content{
+    letter-spacing:1px;
+    line-height:1.5;
+    text-indent:2em;
+    padding:10px 0px 25px;
+}
+/*选择答案*/
+form label{
+    min-width:50%;
+}
+form label input[type="radio"] {
+    margin:0 5px;
+    float:left;
+}
+form label p{
+    display:block;
+    float:left;
+    width:90%;
+    word-wrap:break-word;
+    font-weight:500;
+}
+form button{
+    float:right;
+    /*color: #fff;*/
+    /*background-color: #5cb85c;*/
+    /*border-color: #4cae4c;*/
+}

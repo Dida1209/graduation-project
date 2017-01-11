@@ -1,0 +1,85 @@
+#resourceBlock{
+    float:left;
+    margin-left:15px;
+    font-size:16px;
+}
+#resource ,
+#search{
+    background:#f8f8f8;
+    width:860px;
+    padding:20px 25px;
+    border-radius:5px;
+    position:relative;
+}
+#resource{
+    margin-top:-6px;
+    margin-bottom:16px;
+}
+#intro{
+    display:inline-block;
+    width:33em;
+    background:#333;
+    height:10em;
+}
+#intro .brief p{
+    margin-bottom:1em;
+}
+#intro .brief .resourceTitle{
+    font-weight:600;
+}
+#intro .brief .brief-content{
+    /*多行省略*/
+    text-indent:2em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    /*溢出等咯号隐藏*/
+    word-wrap:break-word;
+    word-break:break-all;
+    /*强制换行*/
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:5;
+    /*-webkit-box的属性*/
+    letter-spacing:1px;
+    line-height:1.2;
+}
+
+#mask,
+.bgBox{
+    display:inline-block;
+    width:16em;
+    height:10em;
+}
+#mask{
+    position:absolute;
+    top:20px;
+    right:25px;
+}
+.bgBox{
+    float:right;
+}
+
+#search{
+    position:relative;
+}
+/*#searchIcon,*/
+/*#subBtn,*/
+#searchInput{
+    float:right;
+}
+#searchInput{
+    width:33em;
+}
+#searchIcon,
+#subBtn{
+    width:30px;
+    height:30px;
+    background:transparent;
+    border:none;
+}
+#searchIcon,
+#subBtn{
+    position:absolute;
+    top:22px;
+    right:28px;
+}

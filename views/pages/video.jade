@@ -1,0 +1,12 @@
+//
+    Created by Dida on 2016/12/21.
+
+extend ../layout
+
+block content
+    #video
+        embed(src="#{movie.flash}",allowFullScreen="true",quality="high",width="720",height="600",align="middle",type="application/x-shockwave-flash")
+    #video-intro (视频简介，下载按钮)
+        #parise-block (推荐，收藏，踩踩)
+    #comment (输入评论)
+    #comment-list (评论列表)

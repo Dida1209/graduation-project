@@ -1,0 +1,19 @@
+.artical{
+    width:860px;
+    float:left;
+    margin-left:15px;
+    font-size:16px;
+    padding:20px 25px;
+    background:#f8f8f8;
+}
+.artical h3{
+    color:#2d3e50;
+    text-shadow:0 0 3px #666;
+    margin-bottom:10px;
+}
+.artical p{
+    font-size:1em;
+    line-height:1.2em;
+    text-indent:2em;
+    letter-spacing:1px;
+}

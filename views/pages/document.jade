@@ -1,0 +1,24 @@
+//
+    Created by Dida on 2016/12/21.
+
+extend ../layout
+
+block append style
+    link(rel="stylesheet",href="/stylesheets/document.css")
+    link(rel="stylesheet",href="/stylesheets/comment.css")
+
+block content
+    #document-block
+        .doc-title 文档名字
+            .praise
+                span 推荐
+                span 收藏
+                span 下载
+        .doc
+        .up-down
+            span.up
+            span.down
+        .aside-icon
+            include ../includes/side-list
+        .comment-block
+            include ../includes/comment
