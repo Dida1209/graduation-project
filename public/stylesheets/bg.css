@@ -9,7 +9,7 @@ body:after{
     z-index:-100;
     top:0;
     left:0;
-    /*background:url('/img/9.jpeg') no-repeat;  !*0,2,5,6,7,8*!*/
+    background:url('/img/9.jpeg') no-repeat;  /*0,2,5,6,7,8*/
     background-size:100%;
 }
 body:after{

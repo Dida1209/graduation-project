@@ -13,10 +13,13 @@ html
     body.clearfix
         include includes/header
         .mainCenter.clear
-            include includes/aside
-            block content
+            .mainAside
+                include includes/aside
+            .mainContent
+                block content
         include includes/footer
         block script
             script(src='/js/hamburger.js')
             script(src='/libs/jquery/dist/jquery.js')
             script(src='/libs/bootstrap/dist/js/bootstrap.js')
+            script(src='/js/header.js')

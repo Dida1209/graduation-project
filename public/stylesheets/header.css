@@ -1,9 +1,11 @@
-.head{
+#head{
     width:100%;
     min-width:1180px;
     font-size:14px;
     background:#1e3034;
     height:5em;
+    position:fixed;
+    z-index:100;
 }
 /**/
 .logo,

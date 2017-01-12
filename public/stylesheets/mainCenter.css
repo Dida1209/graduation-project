@@ -3,4 +3,14 @@
     min-height:500px;
     padding-top:15px;
     margin:0 auto;
+    position:absolute;
+    top:70px;
+    left:7em;
+}
+.mainAside{
+    position:fixed;
+}
+.mainContent{
+    position:relative;
+    left:315px;
 }
