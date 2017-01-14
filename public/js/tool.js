@@ -10,6 +10,6 @@ function addClass(obj,cls){
 function removeClass(obj,cls){
     if(hasClass(obj,cls)){
         let reg=new RegExp('(^|\\s)'+cls+'(\\s|$)');
-        obj.className.replace(reg,' ');
+        obj.className=obj.className.replace(reg,'');
     }
 }

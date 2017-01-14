@@ -1,4 +1,4 @@
-#head{
+.head{
     width:100%;
     min-width:1180px;
     font-size:14px;
@@ -8,25 +8,29 @@
     z-index:100;
     color:#fff;
 }
+.head.is-active{
+    background:#ecf0f1;
+    color:#bdc3c7;
+}
 /**/
-#logo,
+.logo,
 .resource,
 .login-block{
     float:left;
     height:3em;
     line-height:3em;
 }
-#logo{
+.logo{
     margin:.5em 7em;
     width:5em;
     height:2em;
     background:url('/img/logo.png') no-repeat 0px -31px;
 }
-#logo .active{
-    background:url('/img/logo.png') no-repeat 0px 0px;
+.logo.active{
+    background:url('/img/logo.png') no-repeat 0px 0px !important;
 }
-#logo .is-active{
-    background:url('/img/logo.png') no-repeat 0px -62px;
+.logo.is-active{
+    background:url('/img/logo.png') no-repeat 0px -61px;
 }
 /**/
 .resource{

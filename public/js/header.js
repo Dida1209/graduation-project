@@ -11,25 +11,25 @@
         document.addEventListener('DOMMouseScroll',onScroll,false);
     }
     window.onmousewheel=document.onmousewheel=onScroll;
-    let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-    function onScroll(e){
+
+    function onScroll(){
        //let e=e||window.event;
+       let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
        if(scrollTop>0){
            console.log(scrollTop);
-           header.style.background="#ecf0f1";
-           header.style.color="#bdc3c7";
-           logo.classList
+           addClass(header,"is-active");
+           addClass(logo,"is-active");
        }else{
-           console.log(scrollTop);
-           header.style.background="#1e3034";
+           removeClass(header,"is-active");
+           removeClass(logo,"is-active");
        }
     }
     //logo变色
     logo.addEventListener('mouseover',function(){
-        logo.classList.toggle("active");
+        addClass(logo,"active");
     },false);
     logo.addEventListener('mouseout',function(){
-        logo.classList.toggle("active");
+        removeClass(logo,"active");
     },false)
 
 })()
