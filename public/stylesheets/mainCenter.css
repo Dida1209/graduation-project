@@ -1,13 +1,16 @@
 .mainCenter{
     width:1180px;
     min-height:500px;
-    padding-top:70px;
+    padding-top:57px;
     margin:0 auto;
 }
 .mainAside{
-    position:fixed;
+    position:relative;
+    left:0;
 }
 .mainContent{
     position:relative;
-    left:315px;
+    left:15px;
+    width:860px;
+    min-height:500px;
 }

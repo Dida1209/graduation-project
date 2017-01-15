@@ -2,15 +2,16 @@
     float:left;
     width:300px;
     font-size:16px;
+    color:#6f7983;
 }
 .learn-menu{
     width:100%;
-    height: 56px;
+    height: 3em;
     line-height:3em;
     text-align: center;
-    color:#34495e;
+    color:#6f7983;
     font-weight: bold;
-    background: #bec3c7;
+    background: #ecf0f1;
 }
 /**/
 .side-item{
@@ -26,48 +27,62 @@
     height:auto;
 }
 #navigation .item-list a{
-    margin: 0 10%;
-    padding: 0 10%;
+    /*margin: 0 10%;*/
+    padding: 0 25%;
     display: block;
     height: 40px;
     line-height: 40px;
     text-align: left;
-    border-bottom: 1px solid #ecf0f1;
+    /*border-bottom: 1px solid #ecf0f1;*/
     cursor:pointer;
     color:#2d3e50;
 }
-#navigation .item-list .active{
-    color:#ffaeae;
+#navigation .item-list a:hover,
+#navigation .item-list .child:hover{
+    color:#fff;
+    background:#1abc9c;
 }
 #navigation .item-list .child {
-    padding : 0 20%;
+    padding-left: 40%;
 }
 
-
+.hamburger-label{
+    vertical-align:top;
+}
 .hamburger-wrap{
-    background:#f9fdfd;
-    border:1px solid #ecf;
-    border-top:none;
+    background:#ecf0f1;
+    /*background:#f9fdfd;*/
+    /*border:1px solid #ecf;*/
+    /*border-top:none;*/
 }
 .hamburger{
     width:100%;
 }
 .hamburger-box{
     font-size:16px;
-    margin-right:1em;
+    margin-right:1.5em;
 }
 .hamburger-wrap.active{
-    background:#fff;
+    background:#f8f8f8;
 }
 .hamburger--elastic.is-active{
     background:#f8f8f8;
+    color:#a8afb3;
+}
+.hamburger--elastic.is-active:hover .hamburger-label{
+    color:#fff;
+}
+.hamburger--elastic.is-active:hover .hamburger-inner,
+.hamburger--elastic.is-active:hover .hamburger-inner:before,
+.hamburger--elastic.is-active:hover .hamburger-inner:after{
+    background:#fff;
 }
 .hamburger--elastic.is-active .hamburger-label{
     color:#666;
 }
 /*hamburger不动产*/
 .hamburger {
-    padding: 15px 15px;
+    padding: 0.8em;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -81,7 +96,14 @@
     margin: 0;
     overflow: visible; }
 .hamburger:hover {
-    opacity: 0.7; }
+    color:#fff;
+    background:#1abc9c;
+}
+.hamburger:hover .hamburger-inner,
+.hamburger:hover .hamburger-inner:before,
+.hamburger:hover .hamburger-inner:after{
+    background:#fff;
+}
 
 .hamburger-box {
     width: 20px;
