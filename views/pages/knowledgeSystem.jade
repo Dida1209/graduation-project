@@ -12,22 +12,32 @@ block content
             h3.artical-title #{act.title}
             each item in act.content
                 p #{item}
-    .recommend-v
-        .recommend-v-1
+    .recommend-v 推荐视频
+        -var recommentV=[{title:"第一个推荐的视频",recommend:"100",collect:"100",download:"90"},{title:"第er个推荐的视频",recommend:"100",collect:"100",download:"100"},{title:"第san个推荐的视频",recommend:"100",collect:"100",download:"100"}];
+        each video in recommentV
+            .recommend-v-list.clear
+                span
+                span.recommend-v-title #{video.title}
+                span.download #{video.download}
+                span.collect #{video.collect}
+                span.recommend #{video.recommend}
+
+
+        //.recommend-v-list
+        //    span
+        //    span.recommend-v-title
+        //    span.recommend
+        //    span.collect
+        //    span.download
+    .recommend-d 推荐文档
+        .recommend-d-list
             span
             span.recommend-v-title
             span.recommend
             span.collect
             span.download
-    .recommend-d
-        .recommend-d-1
-            span
-            span.recommend-v-title
-            span.recommend
-            span.collect
-            span.download
-    .recommend-t
-        .recommend-t-1
+    .recommend-t 推荐在线测试
+        .recommend-t-list
             span
             span.recommend-v-title
             span.recommend
