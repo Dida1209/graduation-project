@@ -15,10 +15,14 @@ block content
                 span 收藏
                 span 下载
         .doc
-        .up-down
+        #aside-icon.aside-icon
             span.up
+            span.recommend
+            span.collect
+            span.download
             span.down
-        .aside-icon
-            include ../includes/side-list
         .comment-block
             include ../includes/comment
+
+block append script
+    script(src="/js/doc.js")

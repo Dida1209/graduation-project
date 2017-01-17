@@ -43,3 +43,29 @@
 .comment-block{
     padding:20px 30px;
 }
+
+.aside-icon{
+    position:absolute;
+    width:3em;
+    height:15em;
+    background:rgba(255,255,255,0.5);
+    top:200px;
+    right:0;
+    z-index:1000;
+}
+.aside-icon span{
+    display:inline-block;
+    height:3em;
+    width:3em;
+    opacity:0.5;
+    border:1px solid #ecf0f1;
+    border-right:none;
+}
+.aside-icon .recommend{
+    background:url('/img/r-a.png') no-repeat 0.5em 0.5em;
+    background-size:2em;
+}
+.aside-icon .recommend.active{
+    background:url('/img/c-a.png') no-repeat 0.5em 0.5em;
+    background-size:2em;
+}

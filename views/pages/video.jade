@@ -3,10 +3,20 @@
 
 extend ../layout
 
+block append style
+    link(rel="stylesheet" href="/stylesheets/video.css")
+
 block content
-    #video
-        embed(src="#{movie.flash}",allowFullScreen="true",quality="high",width="720",height="600",align="middle",type="application/x-shockwave-flash")
-    #video-intro (视频简介，下载按钮)
-        #parise-block (推荐，收藏，踩踩)
-    #comment (输入评论)
-    #comment-list (评论列表)
+    .video
+        embed(allowFullScreen="true",quality="high",width="100%",height="600",align="middle",type="application/x-shockwave-flash")
+    .video-intro
+        -var videos=[{title:"第一个推荐的视频",subjection:"线性表",recommend:"1000000",collect:"100",download:"90"}];
+        each video in videos
+            .video-name #{video.title}
+            .parise-block
+                span.subjection #{video.subjection}
+                span.download 下载
+                span.collect 收藏
+                span.recommend 推荐
+    .video-comment
+        include ../includes/comment

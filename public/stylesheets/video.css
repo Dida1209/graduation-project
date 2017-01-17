@@ -1,0 +1,47 @@
+.video embed{
+    background:#ecf0f1;
+}
+.video-comment,
+.video-intro{
+    background:#ecf0f1;
+    padding:1em 3em;
+}
+.video-intro .video-name{
+    color:#2d3e50;
+    font-size:1.1em;
+    letter-spacing:1px;
+    text-shadow:0 0 1px #666;
+}
+.video-intro .parise-block{
+    width:100%;
+}
+.video-intro .parise-block span{
+    display:block;
+    float:left;
+    min-width:5em;
+    height:4em;
+}
+.video-intro .parise-block span:nth-child(1){
+    line-height:2em;
+}
+.video-intro .parise-block span.recommend,
+.video-intro .parise-block span.collect,
+.video-intro .parise-block span.download{
+    padding-top:1.8em;
+    float:right;
+    text-align:center;
+    overflow:hidden;
+}
+
+.video-intro .parise-block span.recommend{
+    background:url('/img/r-a.png') no-repeat 1.75em 0em;
+    background-size:1.5em;
+}
+.video-intro .parise-block span.collect{
+    background:url('/img/r-a.png') no-repeat 1.75em 0em;
+    background-size:1.5em;
+}
+.video-intro .parise-block span.download{
+    background:url('/img/r-a.png') no-repeat 1.75em 0em;
+    background-size:1.5em;
+}

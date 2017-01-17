@@ -13,3 +13,21 @@ function removeClass(obj,cls){
         obj.className=obj.className.replace(reg,'');
     }
 }
+//函数节流
+function throttle(fn,context,text,delay,mustApplyTime){
+    //fn调用的函数，context改变函数内的this对象，text处理的数据，delay延迟时间，最大延迟时间
+    clearTimeout(fn.timer);
+    fn._cur=Date.now();
+    if(!fn._start){
+        fn._start=fn._cur;
+    }
+    if(fn._cur-fn._start>mustApplyTime){
+        fn.call(context,text);
+        fn._start=fn._cur;
+    }else{
+        fn.timer=setTimeout(function(){
+            fn.call(context,text);
+        },delay);
+    }
+
+}

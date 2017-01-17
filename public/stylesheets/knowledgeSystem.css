@@ -57,8 +57,28 @@
 .recommend-t-list span.download{
     font-size:0.8em;
     float:right;
+    text-align:left;
+    width:6em;
+    text-indent:2em;
 }
-
+.recommend-v-list span.recommend,
+.recommend-d-list span.recommend,
+.recommend-t-list span.recommend{
+    background:url('/img/r-a.png') no-repeat 0em 0.8em;
+    background-size:25%;
+}
+.recommend-v-list span.collect,
+.recommend-d-list span.collect,
+.recommend-t-list span.collect{
+    background:url('/img/r-a.png') no-repeat 0em 0.8em;
+    background-size:25%;
+}
+.recommend-v-list span.download,
+.recommend-d-list span.download,
+.recommend-t-list span.download{
+    background:url('/img/c-a.png') no-repeat 0em 0.8em;
+    background-size:25%;
+}
 .recommend-v-list span:nth-child(1){
     background:url('/img/video.svg') no-repeat 0em 0.6em;
     background-size:50%;
