@@ -44,3 +44,8 @@ app.get('/test',function (req,res) {
 app.get('/bg',function (req,res) {
     res.render('knowledgeSystem',{});
 });
+
+//个人中心
+app.get('/user',function(req,res){
+    res.render('user',{});
+})

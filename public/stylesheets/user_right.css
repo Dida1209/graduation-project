@@ -1,0 +1,14 @@
+.user-right #rightBlock{
+    background:#1abc9c;
+    color:#fff;
+    fpnt-size:18px;
+    font-weight:bold;
+    width:860px;
+    padding:20px 25px;
+    border-radius:5px 5px 0 0;
+    position:relative;
+    z-index:10;
+}
+/*.user-right #resource:first-child{*/
+    /*border-radius:0 0 5px 5px ;*/
+/*}*/

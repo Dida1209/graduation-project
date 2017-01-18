@@ -1,0 +1,52 @@
+.user_left{
+    width:100%;
+    font-size:16px;
+    border-radius:5px;
+    /*background-color:#f8f8f8;*/
+}
+.user_left .user_headP,
+.user_left .user_recommend,
+.user_left .user_collect,
+.user_left .user_comment,
+.user_left .user_download{
+    background-color:#ecf0f1;
+    height:4em;
+    line-height:4.5em;
+    text-align:center;
+}
+/*.user_left .user_recommend span,*/
+/*.user_left .user_collect span,*/
+/*.user_left .user_comment span,*/
+/*.user_left .user_download span{*/
+    /*width:80%;*/
+    /*height:100%;*/
+    /*display:block;*/
+    /*text-align:center;*/
+    /*line-height:420%;*/
+    /*!*border-bottom:1px solid #bdc3c7;*!*/
+    /*margin:0 auto;*/
+/*}*/
+.user_left .user_download span{
+    border-bottom:none;
+}
+.user_left .user_headP{
+    height:13em;
+    padding-top:23%;
+    /*background-color:#f8f8f8;*/
+}
+.user_left .user_headP img{
+    display:block;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto;
+}
+.user_left .user_recommend.active,
+.user_left .user_collect.active,
+.user_left .user_comment.active,
+.user_left .user_download.active{
+    color:#fff;
+    background:#1abc9c;
+    font-weight:bold;
+}
+

@@ -8,7 +8,6 @@
     width:860px;
     padding:20px 25px;
     border-radius:5px;
-    position:relative;
 }
 #resource{
     margin-top:-6px;
@@ -25,8 +24,17 @@
 }
 #intro .brief .resourceTitle{
     font-weight:600;
+    width:60%;
+    float:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#intro .brief .resourceSubject{
+    width:40%;
+    float:left;
 }
 #intro .brief .brief-content{
+    width:100%;
     /*多行省略*/
     text-indent:2em;
     overflow:hidden;
