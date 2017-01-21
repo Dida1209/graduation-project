@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e886ec3-1e5f-4728-996f-1f75752f6a7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/onlineTest.jade" afterPath="$PROJECT_DIR$/views/pages/onlineTest.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -470,7 +469,7 @@
       <workItem from="1484734803038" duration="10582000" />
       <workItem from="1484811180395" duration="1792000" />
       <workItem from="1484840081803" duration="318000" />
-      <workItem from="1484910678861" duration="4672000" />
+      <workItem from="1484910678861" duration="5208000" />
     </task>
     <task id="LOCAL-00001" summary="static">
       <created>1484232540350</created>
@@ -528,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484840346642</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="model&amp;icon">
+      <created>1484923206100</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1484923206100</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72941000" />
+    <option name="totallyTimeSpent" value="73477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -591,7 +597,8 @@
     <MESSAGE value="video&amp;doc" />
     <MESSAGE value="user" />
     <MESSAGE value="19" />
-    <option name="LAST_COMMIT_MESSAGE" value="19" />
+    <MESSAGE value="model&amp;icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="model&amp;icon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
