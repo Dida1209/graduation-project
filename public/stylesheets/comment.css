@@ -3,17 +3,19 @@
 .myComment{
     margin-bottom:30px;
 }
+#comment.active{
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 .inputComment{
     min-height:30px;
     margin:5px 0px;
     background:#fff;
 }
-.myComment button{
+.myComment button,
+.myComment span{
     float:right;
-    width:3.3em;
-    height:2em;
     line-height:1.2em;
-    padding:0;
+    padding:0.5em;
 }
 /*查看过往评论*/
 .comment-list,

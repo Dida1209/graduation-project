@@ -1,23 +1,33 @@
 //
    Created by lenovo-pc on 2017/1/7.
-.myComment.clear
+#comment.myComment.clear
     form#commentForm(method="POST",action="/user/comment")
-        input(type="hidden",name="comment[movie]",value="")
-        input(type="hidden",name="comment[from]",value="")
+        //input(type="hidden",name="comment[resource]",value="#{re._id}")
+        //input(type="hidden",name="comment[from]",value="#{user._id}")
         .form-group
             textarea.form-control(name="comment[content]",row="3")
-        button.btn.btn-primary(type="submit") 提交
-.comment
-    .comment-list
-        img(src="/img/0.jpg")
-        .comment-body
-            p.name 名字
-            p.content 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            a.reply 回复
-    .reply-list
-        .comment-list
-            img(src="/img/1.jpg")
-            .comment-body
-                p.name 名字的回复
-                p.content 内容
-                a.reply 回复
+        if user
+            button.btn.btn-primary(type="submit") 提交
+        else
+            span.btn.btn-primary 登录后评论
+//.comment
+//    each comment in comments
+//        .comment-list
+//            img(src="/img/0.jpg")
+//            .comment-body
+//                p.name #{comment.from.name}
+//                p.content #{comment.content}
+//                a#reply(href="#comment",data-toId="#{comment.from._id}",data.fromId="#{user._id}") 回复
+//        .reply-list
+//        if comment.reply && comment.reply.length>0
+//            each reply in comment.reply
+//                .comment-list
+//                    img(src="/img/1.jpg")
+//                    .comment-body
+//                        p.name
+//                            |#{reply.from.name}
+//                            span &nbsp;&nbsp;回复&nbsp;&nbsp;
+//                            |#{reply.to.name}
+//                        p.content #{reply.content}
+//                        a#reply(href="#comment",data-toId="#{reply.from._id}",data-fromId="#{user._id}") 回复
+    script(src="/js/comment.js");
