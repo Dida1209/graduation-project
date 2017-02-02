@@ -17,7 +17,7 @@
 //            .comment-body
 //                p.name #{comment.from.name}
 //                p.content #{comment.content}
-//                a#reply(href="#comment",data-toId="#{comment.from._id}",data.fromId="#{user._id}") 回复
+//                a#reply(href="#comment",data-toId="#{comment.from._id}",data.cId="#{comment._id}") 回复
 //        .reply-list
 //        if comment.reply && comment.reply.length>0
 //            each reply in comment.reply
@@ -29,5 +29,5 @@
 //                            span &nbsp;&nbsp;回复&nbsp;&nbsp;
 //                            |#{reply.to.name}
 //                        p.content #{reply.content}
-//                        a#reply(href="#comment",data-toId="#{reply.from._id}",data-fromId="#{user._id}") 回复
+//                        a#reply(href="#comment",data-toId="#{reply.from._id}",data-cId="#{comment._id}") 回复
     script(src="/js/comment.js");

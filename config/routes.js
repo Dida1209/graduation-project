@@ -20,6 +20,10 @@ module.exports=function(app) {
     app.post('/user/signup',user.signup);
     app.post('/user/signin',user.signin);
     app.get('/loginout',user.loginout);
+
+//comment
+    app.post('/user/comment',user.ifSignin,comment.save);
+
 //各种资源点击时(视频、文档、在线测试)
     app.get('/resource', function (req, res) {
         res.render('resource', {});

@@ -12,7 +12,7 @@
 
    function orderData(obj){
         var toId=obj.getAttribute("data-toId");
-        var fromId=obj.getAttribute("data-fromId");
+        var cId=obj.getAttribute("data-cId");
 
         function createInput(name,value) {
             var input = document.createElement("input");
@@ -24,7 +24,7 @@
         }
 
         createInput("comment[replyTo]",toId);
-        createInput("comment[replyFrom]",fromId);
+        createInput("comment[cId]",cId);
 
    }
 
