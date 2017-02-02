@@ -3,17 +3,23 @@
     .resource
         .video.active
             span
-            span 视频
+            a 视频
         .document
             span
-            span 文档
+            a 文档
         .onlineTest
             span
-            span 在线测试
+            a 在线测试
     .login-block
-        a.navbar-link(href="#",data-toggle="modal",data-target="#signupModal") 注册
-        span /
-        a.navbar-link(href="#",data-toggle="modal",data-target="#signinModal") 登录
+        if user
+            p.navbar-text.navbar-right
+                span 欢迎您，#{user.name}
+                span &nbsp;&nbsp;
+                a.navbar-link(href="/loginout") 退出
+        else
+            a.navbar-link(href="#",data-toggle="modal",data-target="#signupModal") 注册
+            a.hyphen /
+            a.navbar-link(href="#",data-toggle="modal",data-target="#signinModal") 登录
 #signupModal.modal.fade
     .modal-dialog
         .modal-content
@@ -40,7 +46,7 @@
                         input#signinName.form-control(name="user[name]",type="text")
                     .form-group
                         label(for="signinPassword") 密码：
-                        input#signinPassword.form-control(name="user[password]",type="text")
+                        input#signinPassword.form-control(name="user[password]",type="password")
                 .modal-footer
                     button.btn.btn-default(type="button",data-dismiss="modal") 关闭
                     button.btn.btn-success(type="submit") 登录

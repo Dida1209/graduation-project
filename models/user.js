@@ -2,23 +2,31 @@
  * Created by lenovo-pc on 2017/1/20.
  */
 var mongoose=require('mongoose');
+var SALT_WORK_FACTOR=10;
+var bcrypt=require('bcryptjs');
 
-var userSchema=new mongoose.schema({
-    name:{
-        unique:true,
-        type:String
+var UserSchema=new mongoose.Schema({
+    name: {
+        unique: true,
+        type: String
     },
-    password:{
-        type:String,
-        require:true
+    password: {
+        type: String,
+        require: true
     },
-    isAdmin:{
-        type:boolean,
-        "default":false
+    isAdmin: {
+        type: Boolean,
+        "default": false
     },
-    created:{
-        type:Date,
-        "default":Date.now()
+    meta: {
+        creatAt: {
+            type: Date,
+            "default": Date.now()
+        },
+        updateAt:{
+            type:Date,
+            "default":Date.now()
+        }
     },
     myRecommend:{
         resources:[{type:mongoose.Schema.ObjectId,ref:'resource'}],
@@ -38,4 +46,37 @@ var userSchema=new mongoose.schema({
     }
 });
 
-mongoose.model('user',userSchema);
+UserSchema.pre('save',function(next){
+    let user=this;
+    if(this.isnew){
+        this.meta.creatAt=this.meta.updateAt=Date.now();
+    }
+    else{
+        this.updateAt=Date.now();
+    }
+    bcrypt.genSalt(SALT_WORK_FACTOR,function(err,salt){
+        if(err){
+            console.log(err);
+        }
+        bcrypt.hash(user.password,salt,function(err,hash){
+            if(err) return next(err);
+            user.password=hash;
+            next();
+        })
+    })
+})
+
+UserSchema.methods={
+    comparePassword:function(_password,cb){
+        bcrypt.compare(_password,this.password,function(err,isMatch){
+            if(err){
+                return cb(err);
+            }else{
+                return cb(null,isMatch);
+            }
+        })
+    }
+}
+
+var User=mongoose.model('User',UserSchema);
+module.exports=User;

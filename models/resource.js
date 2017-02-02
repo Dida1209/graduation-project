@@ -3,7 +3,7 @@
  */
 var mongoose=require('mongoose');
 
-var resourceSchema = new mongoose.Schema({
+var ResourceSchema = new mongoose.Schema({
     reType:String,  //资源内容
     reName:String,  //资源名字
     brief:String,   //资源简介
@@ -11,7 +11,7 @@ var resourceSchema = new mongoose.Schema({
     //资源内容
     created:{
         type:Date,
-        "default":Date.now
+        "default":Date.now()
     }
     recommendNum:{
         type:Number,
@@ -28,4 +28,5 @@ var resourceSchema = new mongoose.Schema({
     comment:[commentSchema]  //subDocument，子文档，即该资源的评论
 });
 
-mongoose.model('resource',resourceSchema);
+var Resource=mongoose.model('Resource',ResourceSchema);
+module.exports=Resource;

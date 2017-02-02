@@ -1,24 +1,27 @@
-/**
- * Created by lenovo-pc on 2017/2/1.
- */
-var mongoose = require('mongoose');
+/* Created by lenovo-pc on 2017/2/1.*/
 
-var commentSchema = new mongoose.Schema({
+var mongoose = require('mongoose');
+var ObjectId=mongoose.Schema.Types.ObjectId;
+
+var CommentSchema = new mongoose.Schema({
     content:{
-        type:String,
-        require:true
+        type:String
     },
     created:{
         type:Date,
         "default":Date.now
     },
     userId:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'user',  //引用自用户模型 user model
-        require:true
+        type:ObjectId,
+        ref:'User' //引用自用户模型 user model
     },
-    subComment:[this]
+    reply:{
+        from:{type:ObjectId,ref:'User'},
+        to:{type:ObjectId,ref:'User'},
+        content:String
+    }
 });
 
 
-mongoose.model('comment',commentSchema);
+var Comment=mongoose.model('Comment',CommentSchema);
+module.exports=Comment;

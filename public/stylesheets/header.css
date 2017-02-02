@@ -48,22 +48,30 @@
 .resource > div:hover{
     background: #1abc9c;
 }
+.resource > div a{
+    color:#fff;
+}
+.resource .active{
+    background: #1abc9c;
+    color:#fff;
+}
 /**/
+.navbar-text{
+    margin:0 0.5em;
+}
 .login-block {
     float: right;
     margin-right: 7em;
 }
-.login-block a,
-.login-block span{
+.login-block a{
     display: inline-block;
-    float: left;
-    width:2.5em;
+    margin:0 0.5em;
     font-size: 1.2em;
     text-align: center;
     color:#ecf0f1;
     cursor: pointer;
 }
-.login-block span{
+.login-block .hyphen{
     cursor: none;
 }
 /**/
