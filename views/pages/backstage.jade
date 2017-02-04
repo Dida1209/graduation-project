@@ -1,0 +1,35 @@
+//
+   Created by lenovo-pc on 2017/2/4.
+
+doctype
+html
+    head
+        link(rel='stylesheet',href='/libs/bootstrap/dist/css/bootstrap.css')
+    body
+        div.container
+            ul.nav.nav-tabs(role="tablist")
+                li.active(role="presentation")
+                    a(href="#video",aria-controls="video",role="tab",data-toggle="tab") video
+                li(role="presentation")
+                    a(href="#document",aria-controls="document",role="tab",data-toggle="tab") document
+                li(role="presentation")
+                    a(href="#test",aria-controls="test",role="tab",data-toggle="tab") test
+        div.tab-content.container
+            div#video.tab-pane.active(role="tabpanel")
+                .row
+                    form.form-horizontal(method="post",action="/admin/resource/new")
+                        input(type="hidden",name="resource[_id]",value="#{resource._id}")
+                        .form-group
+                            label.col-sm-2.control-label(for="inputTitle") 视频名字
+                            .col-dm-10
+                                input#inputTitle.form-control(type="text",name="resource[title]",value="#{resource.title}")
+                        .form-group
+
+            div#document.tab-pane(role="tabpanel")
+                form
+                    input
+            div#test.tab-pane(role="tabpanel")
+                form
+                    input
+    script(src='/libs/jquery/dist/jquery.js')
+    script(src='/libs/bootstrap/dist/js/bootstrap.js')

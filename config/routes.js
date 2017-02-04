@@ -2,6 +2,7 @@
  * Created by lenovo-pc on 2017/2/1.
  */
 var user=require('../controller/user');
+var comment=require('../controller/comment');
 
 module.exports=function(app) {
 //pre heandle user
@@ -51,6 +52,10 @@ module.exports=function(app) {
 //个人中心
     app.get('/user', function (req, res) {
         res.render('user', {});
+    })
+//后台录入
+    app.get('/backstage',function(req,res){
+        res.render('backstage',{});
     })
 
 }
