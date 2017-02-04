@@ -20,8 +20,20 @@ var VideoSchema=new mongoose.Schema({
     createAt:{
         type:Date,
         default:Date.now()
+    },
+    recommendNum:{
+        type:Number,
+        "default":0
+    },
+    collectNum:{
+        type:Number,
+        "default":0
+    },
+    downloadNum:{
+        type:Number,
+        "default":0
     }
-})
+});
 
 var Video=mongoose.model('Video',VideoSchema);
 module.exports=Video;

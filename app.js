@@ -8,21 +8,19 @@ var bodyParser = require('body-parser');
 var logger=require('morgan');
 var app = express();
 
-var mongoose=require('mongoose');
-var dbUrl="mongodb://localhost/graduation-project";
-mongoose.connect(dbUrl);
-
 var cookieParser=require('cookie-parser');
 var session=require('express-session');
 var mongoStore=require('connect-mongo')(session);
 
+var mongoose=require('mongoose');
+var dbUrl="mongodb://localhost/graduation-project";
+mongoose.connect(dbUrl);
+
 app.set('views','./views/pages');
 app.set('view engine','jade');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); //把提交的表单对象格式化
 app.use(express.static(path.join(__dirname, '/public')));
-
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended:true})); //把提交的表单对象格式化
 
 app.use(cookieParser());
 app.use(session({
@@ -43,5 +41,7 @@ if(app.get('env')==='development'){
 require('./config/routes')(app);
 app.locals.moment=require('moment');
 app.listen(port);
-
+app.post('/admin/video/new',function(req,res){
+    console.log(req.body);
+});
 console.log('graduation-project is running on port '+port);

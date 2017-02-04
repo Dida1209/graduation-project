@@ -20,8 +20,20 @@ var TestSchema=mongoose.Schema({
     createAt:{
         type:Date,
         default:Date.now()
+    },
+    recommendNum:{
+        type:Number,
+        "default":0
+    },
+    collectNum:{
+        type:Number,
+        "default":0
+    },
+    downloadNum:{
+        type:Number,
+        "default":0
     }
-})
+});
 
 var Test=mongoose.model('Test',TestSchema);
 module.exports=Test;

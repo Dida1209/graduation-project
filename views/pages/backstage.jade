@@ -1,10 +1,10 @@
 //
    Created by lenovo-pc on 2017/2/4.
-
 doctype
 html
     head
         link(rel='stylesheet',href='/libs/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet',href='/stylesheets/in.css')
     body
         div.container
             ul.nav.nav-tabs(role="tablist")
@@ -16,20 +16,12 @@ html
                     a(href="#test",aria-controls="test",role="tab",data-toggle="tab") test
         div.tab-content.container
             div#video.tab-pane.active(role="tabpanel")
-                .row
-                    form.form-horizontal(method="post",action="/admin/resource/new")
-                        input(type="hidden",name="resource[_id]",value="#{resource._id}")
-                        .form-group
-                            label.col-sm-2.control-label(for="inputTitle") 视频名字
-                            .col-dm-10
-                                input#inputTitle.form-control(type="text",name="resource[title]",value="#{resource.title}")
-                        .form-group
-
+                include ../includes/video-in
             div#document.tab-pane(role="tabpanel")
-                form
-                    input
+                include ../includes/doc-in
             div#test.tab-pane(role="tabpanel")
-                form
-                    input
+                include ../includes/test-in
     script(src='/libs/jquery/dist/jquery.js')
+    script(src='/js/tool.js')
+    script(src='/js/in.js')
     script(src='/libs/bootstrap/dist/js/bootstrap.js')

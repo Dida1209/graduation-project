@@ -1,0 +1,45 @@
+//
+   Created by lenovo-pc on 2017/2/4.
+
+.row
+    form.form-horizontal(method="POST",action="/admin/video/new")
+        input(type="hidden",name="video[_id]")
+        .form-group
+            label.col-sm-2.control-label(for="inputName") 视频名字
+            .col-sm-10
+                input#inputName.form-control(type="text",name="video[name]")
+        .form-group
+            label.col-sm-2.control-label(for="inputContent") 视频地址
+            .col-sm-10
+                input#inputContent.form-control(type="text",name="video[content]")
+        .form-group
+            label.col-sm-2.control-label(for="inputBrief") 视频简介
+            .col-sm-10
+                textarea#inputBrief.form-control(type="text",name="video[brief]")
+        .form-group
+            label.col-sm-2.control-label(for="inputSubjection") 视频属性
+            .col-sm-10
+                .btn-group.active
+                    button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
+                        |请选择
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(index="0") 线性表
+                .btn-group
+                    button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
+                        |请选择
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(index="0") 顺序表
+                .btn-group
+                    button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
+                        | 请选择
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(index="0") 顺序表
+        .form-group
+            .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type="submit") 录入

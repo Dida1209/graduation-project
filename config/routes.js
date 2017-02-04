@@ -10,8 +10,7 @@ module.exports=function(app) {
         var _user=req.session.user;
             app.locals.user=_user;
         next();
-    })
-
+    });
 //首页--知识体系
     app.get('/', function (req, res) {
         res.render('concept', {});
@@ -37,7 +36,7 @@ module.exports=function(app) {
 //文档页+学习目录
     app.get('/doc', function (req, res) {
         res.render('document', {});
-    })
+    });
 
 //在线测试+学习目录
     app.get('/test', function (req, res) {
@@ -52,10 +51,20 @@ module.exports=function(app) {
 //个人中心
     app.get('/user', function (req, res) {
         res.render('user', {});
-    })
+    });
 //后台录入
     app.get('/backstage',function(req,res){
         res.render('backstage',{});
     })
 
-}
+//后台video录入
+    app.post('/admin/video/new',function(req,res){
+        res.render('/',{});
+    })
+
+//后台test录入
+    app.post('/admin/test/new',function(req,res){
+        res.render('/',{});
+    })
+
+};
