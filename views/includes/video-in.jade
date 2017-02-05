@@ -2,7 +2,8 @@
    Created by lenovo-pc on 2017/2/4.
 
 .row
-    form.form-horizontal(method="POST",action="/admin/video/new")
+    form#videoForm.form-horizontal(method="POST",action="/admin/video/new")
+        input(type="hidden",name="video[subjection]")
         input(type="hidden",name="video[_id]")
         .form-group
             label.col-sm-2.control-label(for="inputName") 视频名字
@@ -19,21 +20,22 @@
         .form-group
             label.col-sm-2.control-label(for="inputSubjection") 视频属性
             .col-sm-10
-                .btn-group.active
+                .btn-group.isVideo.active
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         |请选择
                         span.caret
                     ul.dropdown-menu
                         li
                             a(index="0") 线性表
-                .btn-group
+                .btn-group.isVideo
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         |请选择
                         span.caret
                     ul.dropdown-menu
                         li
                             a(index="0") 顺序表
-                .btn-group
+                            a(index="0") 顺序表
+                .btn-group.isVideo
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         | 请选择
                         span.caret

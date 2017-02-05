@@ -13,6 +13,18 @@ function removeClass(obj,cls){
         obj.className=obj.className.replace(reg,'');
     }
 }
+
+//追加元素
+function insertAfter(newElement,position,parent){
+    if(parent.lastChild==position){
+        parent.appendChild(newElement);
+    }else{
+        console.log('child');
+        parent.insertBefore(newElement,position);
+    }
+
+}
+
 //函数节流
 function throttle(fn,context,text,delay,mustApplyTime){
     //fn调用的函数，context改变函数内的this对象，text处理的数据，delay延迟时间，最大延迟时间

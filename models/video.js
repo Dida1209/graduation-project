@@ -4,19 +4,19 @@
 var mongoose=require('mongoose');
 
 var VideoSchema=new mongoose.Schema({
-    vSubjection:{
+    subjection:{
         type:String,
         require:true
     },
-    vName:{
+    name:{
         type:String,
         require:true
     },
-    vBrief:{
+    brief:{
         type:String,
         require:true
     },
-    vContent:String,
+    content:String,
     createAt:{
         type:Date,
         default:Date.now()
