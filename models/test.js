@@ -4,19 +4,19 @@
 var mongoose=require('mongoose');
 
 var TestSchema=mongoose.Schema({
-    tSubjection:{
+    subjection:{
         type:String,
         require:true
     },
-    tName:{
+    name:{
         type:String,
         require:true
     },
-    tBrief:{
+    brief:{
         type:String,
         require:true
     },
-    tContent:String,
+    content:String,
     createAt:{
         type:Date,
         default:Date.now()
