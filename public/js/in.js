@@ -7,8 +7,8 @@
     var video=document.getElementById('videoForm');
     var test=document.getElementById('testForm');
     var doc=document.getElementById('docForm');
-    var ul2=document.getElementById('ul2');
-    var ul3=document.getElementById('ul3');
+    var ul2=document.querySelectorAll('ul2');
+    var ul3=document.querySelectorAll('ul3');
 
     var sub,digit,flag=false;
 
@@ -29,9 +29,14 @@
         [['顺序表查找','有序表查找','索引顺序表查找'],['二叉排序树','平衡二叉树']],//4
         ['简单排序','堆排序']//5
     ]
-    // if(btn.length>0){
-    //     console.log('111'+btn[1]);
-    // }
+    if(btn.length>0){
+        console.log('111'+btn);
+        forEach(btn, function(btn,item) {
+            btn.addEventListener("click", function(e) {
+                checkIndex(this,e.target,item);
+            }, false);
+        });
+    }
 
     //创建下拉菜单
     function createLi(ul,array,index1){
@@ -48,40 +53,43 @@
 
             }
         }
-
-        ul.innerHTML=template;
-        console.log(ul.innerHTML,template);
+        for(var j=0;j<ul.length;j++){
+            ul[j].innerHTML=template;
+        }
+        // ul.innerHTML=template;
+        console.log(ul[j].innerHTML,template);
     }
 
-    function createValue(substring){
+    function createValue(btn,substring){
         var parent;
-        if(btn[0].className.indexOf('isVideo')>0){
+        console.log(btn);
+        if(btn.className.indexOf('isVideo')>0){
             parent=video;
             //console.log(Boolean(btn[0].className.indexOf('isVideo')),parent);
         }
-        if(btn[0].className.indexOf('isDoc')>0){
+        if(btn.className.indexOf('isDoc')>0){
             parent=doc;
             //console.log(btn[0].className.indexOf('isDoc'),parent);
         }
-        if(btn[0].className.indexOf('isTest')>0){
+        if(btn.className.indexOf('isTest')>0){
             parent=test;
         }
         //console.log('parent'+btn[0].className.indexOf('isVideo'),parent.childNodes[0],parent.elements[0].value);
         parent.elements[0].value=substring;
     }
 
-    function checkIndex(obj,num){
-        console.log(obj);
+    function checkIndex(btn,obj,num){
+        console.log(btn,obj,num);
         let index=obj.getAttribute('index');
         if(index>=0){
-            if(num==0) {
+            if(num%3==0) {
                 sub=''+index;
                 digit=index;
-                btn[0].childNodes[1].innerHTML=obj.innerHTML;
+                btn.childNodes[1].innerHTML=obj.innerHTML;
                 //console.log(btn[0].childNodes[1],obj.innerHTML);
                 createLi(ul2,num2[digit]);
             }
-            if(num==1){
+            if(num%3==1){
                 switch(sub){
                     case '0':
                         if(index<1){
@@ -136,7 +144,7 @@
                     default:
                         console.log('switch error');
                 }
-                btn[1].childNodes[1].innerHTML=obj.innerHTML;
+                btn.childNodes[1].innerHTML=obj.innerHTML;
                 if(!flag&&digit==4){
                     createLi(ul3,num3[digit],index);
                 }
@@ -146,28 +154,39 @@
             }
             if(num==2){
                 sub+='-'+index;
-                btn[2].childNodes[1].innerHTML=obj.innerHTML;
+                btn.childNodes[1].innerHTML=obj.innerHTML;
                 flag=true;
             }
             if(flag){
-                createValue(sub);
+                createValue(btn,sub);
             }else{
+                console.log('btn[]:'+btn[num+1]);
                 addClass(btn[num+1],'active');
             }
         }
 
     }
-    btn[0].addEventListener('click',function(e){
-        removeClass(btn[1],'active');
-        removeClass(btn[2],'active');
-        checkIndex(e.target,0);
-    })
-    btn[1].addEventListener('click',function(e){
-        removeClass(btn[2],'active');
-        checkIndex(e.target,1);
-    })
-    btn[2].addEventListener('click',function(e){
-        checkIndex(e.target,2);
-    })
+
+    function removeActive(obj,array){
+        for(var a=0;a<array.length;a++){
+            removeClass(array[a],'active');
+        }
+    }
+
+
+    //     }
+    //     if(k%3==1){
+    //         btn[k].addEventListener('click',function(e){
+    //             removeActive.apply(null,k+1);
+    //             checkIndex(e,e.target,1);
+    //         })
+    //     }
+    //     if(k%3==2){
+    //         btn[2].addEventListener('click',function(e){
+    //             checkIndex(e,e.target,2);
+    //         })
+    //     }
+    // }
+
 })()
 
