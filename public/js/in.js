@@ -7,10 +7,11 @@
     var video=document.getElementById('videoForm');
     var test=document.getElementById('testForm');
     var doc=document.getElementById('docForm');
-    var ul2=document.querySelectorAll('ul2');
-    var ul3=document.querySelectorAll('ul3');
+    var ul2=document.querySelectorAll('.ul2');
+    var ul3=document.querySelectorAll('.ul3');
 
-    var sub,digit,flag=false;
+    var sub='';
+    var digit,flag=false;
 
     //digit
     var num2=[
@@ -30,14 +31,28 @@
         ['简单排序','堆排序']//5
     ]
     if(btn.length>0){
-        console.log('111'+btn);
         forEach(btn, function(btn,item) {
             btn.addEventListener("click", function(e) {
+                if(item%3==0){
+                    removeActive([item+1,item+2]);
+                }
+                if(item%3==1){
+                    removeActive([item+1]);
+                }
+                console.log('click');
                 checkIndex(this,e.target,item);
             }, false);
         });
     }
 
+    //删除Active属性
+    function removeActive(index){
+        for(var a=0;a<index.length;a++){
+            var ind=index[a];
+            //console.log('removeBtn'+btn[ind]);
+            removeClass(btn[ind],'active');
+        }
+    }
     //创建下拉菜单
     function createLi(ul,array,index1){
         var template='';
@@ -49,47 +64,67 @@
             console.log('array[index1]'+array[index1]);
             for(var i=0;i<array[index1].length;i++){
                 template+='<li><a index="'+i+'">'+array[index1][i]+'</a></li>';
-                console.log(array[index1][i],template);
+                //console.log(array[index1][i],template);
 
             }
         }
         for(var j=0;j<ul.length;j++){
             ul[j].innerHTML=template;
+            //console.log(ul[j].innerHTML,template);
         }
-        // ul.innerHTML=template;
-        console.log(ul[j].innerHTML,template);
+
     }
 
-    function createValue(btn,substring){
+    function createValue(but,subjection){
         var parent;
-        console.log(btn);
-        if(btn.className.indexOf('isVideo')>0){
+        console.log(but);
+        if(but.className.indexOf('isVideo')>0){
             parent=video;
-            //console.log(Boolean(btn[0].className.indexOf('isVideo')),parent);
         }
-        if(btn.className.indexOf('isDoc')>0){
+        if(but.className.indexOf('isDoc')>0){
             parent=doc;
-            //console.log(btn[0].className.indexOf('isDoc'),parent);
         }
-        if(btn.className.indexOf('isTest')>0){
+        if(but.className.indexOf('isTest')>0){
             parent=test;
+            console.log('but'+but,parent);
         }
-        //console.log('parent'+btn[0].className.indexOf('isVideo'),parent.childNodes[0],parent.elements[0].value);
-        parent.elements[0].value=substring;
+        parent.elements[0].value=subjection;
     }
 
-    function checkIndex(btn,obj,num){
-        console.log(btn,obj,num);
+    //检查sub
+    function checkSub(number,subject){
+        if(number==0){
+                subject='';
+                console.log('subject'+subject);
+                return subject;
+        }
+        if(number==1){
+                subject=subject.substring(0,1);
+                console.log('subject'+subject);
+                return subject;
+        }
+        if(number==2){
+                subject=subject.substring(0,3);
+                console.log('subject'+subject);
+                return subject;
+        }
+    }
+    //检查index
+    function checkIndex(thisBtn,obj,num){
         let index=obj.getAttribute('index');
         if(index>=0){
             if(num%3==0) {
+                //console.log('sub'+sub);
+                sub=checkSub(0,sub);
                 sub=''+index;
                 digit=index;
-                btn.childNodes[1].innerHTML=obj.innerHTML;
-                //console.log(btn[0].childNodes[1],obj.innerHTML);
+                thisBtn.childNodes[1].innerHTML=obj.innerHTML;
+                //console.log('number=0,sub='+sub);
                 createLi(ul2,num2[digit]);
             }
             if(num%3==1){
+               // console.log('sub'+sub);
+                sub=checkSub(1,sub);
                 switch(sub){
                     case '0':
                         if(index<1){
@@ -144,7 +179,7 @@
                     default:
                         console.log('switch error');
                 }
-                btn.childNodes[1].innerHTML=obj.innerHTML;
+                thisBtn.childNodes[1].innerHTML=obj.innerHTML;
                 if(!flag&&digit==4){
                     createLi(ul3,num3[digit],index);
                 }
@@ -152,41 +187,26 @@
                     createLi(ul3,num3[digit]);
                 }
             }
-            if(num==2){
+            if(num%3==2){
+                //console.log('sub'+sub);
+                sub=checkSub(2,sub);
                 sub+='-'+index;
-                btn.childNodes[1].innerHTML=obj.innerHTML;
+                thisBtn.childNodes[1].innerHTML=obj.innerHTML;
                 flag=true;
             }
             if(flag){
-                createValue(btn,sub);
+                flag=false;
+                createValue(thisBtn,sub);
             }else{
-                console.log('btn[]:'+btn[num+1]);
-                addClass(btn[num+1],'active');
+                //console.log('btn[]:'+btn[num+1]);
+                if(num<btn.length-1){
+                    btn[num+1].childNodes[1].innerHTML='请选择'+'<span class="caret"></span>';
+                    addClass(btn[num+1],'active');
+                }
             }
         }
 
     }
-
-    function removeActive(obj,array){
-        for(var a=0;a<array.length;a++){
-            removeClass(array[a],'active');
-        }
-    }
-
-
-    //     }
-    //     if(k%3==1){
-    //         btn[k].addEventListener('click',function(e){
-    //             removeActive.apply(null,k+1);
-    //             checkIndex(e,e.target,1);
-    //         })
-    //     }
-    //     if(k%3==2){
-    //         btn[2].addEventListener('click',function(e){
-    //             checkIndex(e,e.target,2);
-    //         })
-    //     }
-    // }
 
 })()
 
