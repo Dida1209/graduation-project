@@ -1,26 +1,17 @@
 //
+   Created by lenovo-pc on 2017/2/10.
+
+//
    Created by lenovo-pc on 2017/2/4.
 
 .row
-    form#testForm.form-horizontal(method="POST",action="/admin/test/new")
-        input(type="hidden",name="test[subjection]")
-        input(type="hidden",name="test[_id]")
+    form#resourceForm.form-horizontal(method="POST",action="/admin/resource/new")
+        input(type="hidden",name="resource[subjection]")
+        input(type="hidden",name="resource[_id]")
         .form-group
-            label.col-sm-2.control-label(for="inputName") 试题名字
+            label.col-sm-2.control-label(for="inputSubjection") 资源属性
             .col-sm-10
-                input#inputName.form-control(type="text",name="test[name]")
-        .form-group
-            label.col-sm-2.control-label(for="inputContent") 试题地址
-            .col-sm-10
-                input#inputContent.form-control(type="text",name="test[content]")
-        .form-group
-            label.col-sm-2.control-label(for="inputBrief") 试题简介
-            .col-sm-10
-                textarea#inputBrief.form-control(type="text",name="test[brief]")
-        .form-group
-            label.col-sm-2.control-label(for="inputSubjection") 试题属性
-            .col-sm-10
-                .btn-group.isTest.active
+                .btn-group.isResource.active
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         |请选择
                         span.caret
@@ -32,24 +23,24 @@
                             a(index="3") 图
                             a(index="4") 查找
                             a(index="5") 排序
-                .btn-group.isTest
+                .btn-group.isResource
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         |请选择
                         span.caret
                     ul.ul2.dropdown-menu
 
-                .btn-group.isTest
+                .btn-group.isResource
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
                         | 请选择
                         span.caret
                     ul.ul3.dropdown-menu
         .form-group
-            label.col-sm-2.control-label(for="inputContent") 试题内容
+            label.col-sm-2.control-label(for="inputContent") 资源内容
             .col-sm-10
-                span 添加题目&nbsp;&nbsp;&nbsp;
+                span 添加内容&nbsp;&nbsp;&nbsp;
                 span.btn.btn-default +
         .form-group
             .col-sm-offset-2
             .col-sm-10
                 button.btn.btn-default(type="submit") 录入
-    script(src="/js/test-in.js")
+    script(src="/js/res-in.js")

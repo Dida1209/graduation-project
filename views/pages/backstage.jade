@@ -9,13 +9,17 @@ html
         div.container
             ul.nav.nav-tabs(role="tablist")
                 li.active(role="presentation")
-                    a(href="#video",aria-controls="video",role="tab",data-toggle="tab") video
+                    a(href="#resource",aria-controls="resource",role="tab",data-toggle="tab") 资源
                 li(role="presentation")
-                    a(href="#document",aria-controls="document",role="tab",data-toggle="tab") document
+                    a(href="#video",aria-controls="video",role="tab",data-toggle="tab") 视频
                 li(role="presentation")
-                    a(href="#test",aria-controls="test",role="tab",data-toggle="tab") test
+                    a(href="#document",aria-controls="document",role="tab",data-toggle="tab") 文案
+                li(role="presentation")
+                    a(href="#test",aria-controls="test",role="tab",data-toggle="tab") 测试
         div.tab-content.container
-            div#video.tab-pane.active(role="tabpanel")
+            div#resource.active.tab-pane(role="tabpanel")
+                include ../includes/res-in
+            div#video.tab-pane(role="tabpanel")
                 include ../includes/video-in
             div#document.tab-pane(role="tabpanel")
                 include ../includes/doc-in

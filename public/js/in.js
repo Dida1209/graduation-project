@@ -4,6 +4,7 @@
 (function(){
     var btn=document.querySelectorAll('.btn-group');
     //var dropmenu=document.quer
+    var res=document.getElementById('resourceForm');
     var video=document.getElementById('videoForm');
     var test=document.getElementById('testForm');
     var doc=document.getElementById('docForm');
@@ -21,7 +22,7 @@
         ['遍历图','图的连通性','最短路径'],//3
         ['静态查找表','动态查找表','哈希表'],//4
         ['插入排序','快速排序','选择排序']//5
-             ]
+             ];
     var num3=[
         ['线性链表','循环链表','双向链表'],//0
         ['循环队列','链队列'],//1
@@ -29,7 +30,7 @@
         [],//3
         [['顺序表查找','有序表查找','索引顺序表查找'],['二叉排序树','平衡二叉树']],//4
         ['简单排序','堆排序']//5
-    ]
+    ];
     if(btn.length>0){
         forEach(btn, function(btn,item) {
             btn.addEventListener("click", function(e) {
@@ -78,6 +79,9 @@
     function createValue(but,subjection){
         var parent;
         console.log(but);
+        if(but.className.indexOf('isResource')>0){
+            parent=res;
+        }
         if(but.className.indexOf('isVideo')>0){
             parent=video;
         }
@@ -113,6 +117,7 @@
     function checkIndex(thisBtn,obj,num){
         let index=obj.getAttribute('index');
         if(index>=0){
+            console.log(flag);
             if(num%3==0) {
                 //console.log('sub'+sub);
                 sub=checkSub(0,sub);
