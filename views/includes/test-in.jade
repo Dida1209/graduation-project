@@ -22,7 +22,7 @@
             .col-sm-10
                 .btn-group.isTest.active
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
-                        |请选择
+                        | 请选择
                         span.caret
                     ul.ul1.dropdown-menu
                         li
@@ -34,7 +34,7 @@
                             a(index="5") 排序
                 .btn-group.isTest
                     button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",index="-1")
-                        |请选择
+                        | 请选择
                         span.caret
                     ul.ul2.dropdown-menu
 
@@ -44,12 +44,49 @@
                         span.caret
                     ul.ul3.dropdown-menu
         .form-group
-            label.col-sm-2.control-label(for="inputContent") 试题内容
-            .col-sm-10
-                span 添加题目&nbsp;&nbsp;&nbsp;
-                span.btn.btn-default +
+            label.col-sm-2.control-label(for="testContent") 试题内容
+            #testContent.col-sm-10
+                .modal-body
+                    .form-group
+                        label.col-sm-2(for="testName") 题目:
+                        .col-sm-10
+                            input#testName.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="textAnsA") A:
+                        .col-sm-10
+                            input#testAnsA.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="textAnsB") B:
+                        .col-sm-10
+                            input#testAnsB.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="textAnsC") C:
+                        .col-sm-10
+                            input#testAnsC.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="textAnsD") D:
+                        .col-sm-10
+                            input#testAnsD.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="correctAns") 正解:
+                        .col-sm-10
+                            input#correctAns.form-control(type="text")
+                    .form-group
+                        label.col-sm-2(for="why") 详解:
+                        .col-sm-10
+                            input#why.form-control(type="text")
+                    .form-group
+                        span#testDel.btn.btn-default 取消
+                        span#testSubmit.btn.btn-primary 确定
+            div#concatContent(name="test[content]")
+            .form-group
+                .col-sm-1
+                .col-sm-11
+                    span 添加题目&nbsp;&nbsp;&nbsp;
+                    span#addTest.btn.btn-default +
         .form-group
-            .col-sm-offset-2
-            .col-sm-10
+            .col-sm-12
                 button.btn.btn-default(type="submit") 录入
+    script(src='/js/tool.js')
     script(src="/js/test-in.js")
+

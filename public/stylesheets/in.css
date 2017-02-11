@@ -10,3 +10,12 @@
 .btn-group.active{
     opacity:1;
 }
+#testContent{
+    display:none;
+}
+#testContent.active{
+    display:block;
+}
+#testSubmit{
+    margin-left:10px;
+}
