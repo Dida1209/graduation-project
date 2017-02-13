@@ -14,5 +14,9 @@ var ResourceSchema = new mongoose.Schema({
     //comment:[commentSchema]  //subDocument，子文档，即该资源的评论
 });
 
+ResourceSchema.pre('save',function(){
+        this.created=Date.now();
+
+});
 var Resource=mongoose.model('Resource',ResourceSchema);
 module.exports=Resource;
