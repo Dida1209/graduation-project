@@ -35,9 +35,12 @@ var VideoSchema=new mongoose.Schema({
     }
 });
 
-VideoSchema.pre('save',function(){
-    this.created=Date.now();
-
+VideoSchema.pre('save',function(next){
+    if(this.isNew){
+        this.created=Date.now();
+    }
+    next();
 });
+
 var Video=mongoose.model('Video',VideoSchema);
 module.exports=Video;
