@@ -20,11 +20,11 @@ exports.checkin=function(req,res){
                 content:_video.content,
                 brief:_video.brief
             });
-           // var video=new Video(_video);这样写是错的
+            // var video=new Video(_video);这样写是错的
 
-            if(video.id!=""){
-                console.log('video.id 为空'+video);
-            }
+            // if(video.id!=""){
+            //     console.log('video.id 为空'+video);
+            // }
             video.save(function(err,video){
                 if(err){
                     console.log('视频保存出错'+err);

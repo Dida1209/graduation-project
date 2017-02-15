@@ -35,9 +35,9 @@ var TestSchema=mongoose.Schema({
     }
 });
 
-TestSchema.pre('save',function(){
+TestSchema.pre('save',function(next){
     this.created=Date.now();
-
+    next();
 });
 var Test=mongoose.model('Test',TestSchema);
 module.exports=Test;

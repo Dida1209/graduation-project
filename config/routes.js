@@ -3,7 +3,9 @@
  */
 var user=require('../controller/user');
 var comment=require('../controller/comment');
+var resource=require('../controller/resource');
 var video=require('../controller/video');
+var test=require('../controller/test');
 
 module.exports=function(app) {
 //pre heandle user
@@ -62,8 +64,8 @@ module.exports=function(app) {
     app.post('/admin/video/new',video.checkin);
 
 //后台test录入
-    app.post('/admin/test/new',function(req,res){
-        res.render('/',{});
-    })
+    app.post('/admin/test/new',test.checkin);
 
+//后台resource录入
+    app.post('/admin/resource/new',resource.checkin);
 };
