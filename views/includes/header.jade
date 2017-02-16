@@ -3,17 +3,17 @@
     .resource
         .video.active
             span
-            a 视频
+            a(href='/video') 视频
         .document
             span
-            a 文档
+            a(href='/doc') 文档
         .onlineTest
             span
-            a 在线测试
+            a(href='/test') 在线测试
     .login-block
         if user
             p.navbar-text.navbar-right
-                span 欢迎您，#{user.name}
+                a(href="/user") 欢迎您，#{user.name}
                 span &nbsp;&nbsp;
                 a.navbar-link(href="/loginout") 退出
         else

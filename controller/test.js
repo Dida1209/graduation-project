@@ -24,7 +24,7 @@ exports.checkin=function(req,res){
                     console.log('test存储出错'+err);
                 }
                 console.log('test存储成功'+test.content);
-                res.redirect('/backstage');
+                res.redirect('backstage');
             })
         }
     })

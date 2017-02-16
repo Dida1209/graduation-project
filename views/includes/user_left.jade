@@ -4,7 +4,6 @@
 #user_left.user_left.clear
     .user_headP
         img(src="/img/0.jpg")
-    .user_recommend.active 我的推荐
-    .user_collect 我的收藏
-    .user_comment 我的下载
-    .user_download 我的评论
+    .user_recommend.active(data-href="/user/recommend") 我的推荐
+    .user_collect(data-href="/user/collect") 我的收藏
+    .user_comment(data-href="/user/comment") 我的评论
