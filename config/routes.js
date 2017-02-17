@@ -28,6 +28,11 @@ module.exports=function(app) {
     app.post('/user/comment',user.ifSignin,comment.save);
 
 //搜索供功能
+    app.post('/video/search',function(){})
+
+    app.post('/doc/search',function(){})
+
+    app.post('/test/search',function(){})
 
 //各种资源列表(视频、文档、在线测试)
     app.get('/videolist',function(req,res){
@@ -42,28 +47,28 @@ module.exports=function(app) {
 
     })
 //各种资源被点击展示时(视频、文档、在线测试)
-    app.get('/video',function(req,res){
+    app.get('/video/:id',function(req,res){
         res.render('video',{})
     })
 
-    app.get('/doc', function (req, res) {
+    app.get('/doc/:id', function (req, res) {
         res.render('document', {});
     });
 
-    app.get('/test', function (req, res) {
+    app.get('/test/:id', function (req, res) {
         res.render('onlineTest', {});
     });
 //视频页+学习目录
-    app.get('/video/:subjection', function (req, res) {
+    app.get('/videolist/:subjection', function (req, res) {
         res.render('video', {});
     });
 //文档页+学习目录
-    app.get('/doc/:subjection', function (req, res) {
+    app.get('/doclist/:subjection', function (req, res) {
         res.render('document', {});
     });
 
 //在线测试+学习目录
-    app.get('/test/:subjection', function (req, res) {
+    app.get('/testlist/:subjection', function (req, res) {
         res.render('onlineTest', {});
     });
 

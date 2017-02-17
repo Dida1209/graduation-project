@@ -12,9 +12,9 @@ block content
     .video-intro
         -var videos=[{title:"第一个推荐的视频",subjection:"线性表",recommend:"1000000",collect:"100",download:"90"}];
         each video in videos
-            .video-name #{video.title}
+            .video-name =video.name
             .parise-block
-                span.subjection #{video.subjection}
+                span.subjection =video.subjection
                 span.download 下载
                 span.collect 收藏
                 span.recommend 推荐
