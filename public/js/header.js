@@ -4,6 +4,17 @@
 (function(){
     let header=document.getElementById("head");
     let logo=document.getElementById("logo");
+
+    let par=header.childNodes.item(2);
+    console.log(par);
+
+    let alist=document.querySelectorAll(".item-list");
+    forEach(alist,function(a){
+        a.addEventListener("click",function(e){
+            // forEach()
+            console.log(this,e.target);
+        })
+    })
     //let resource=document.getElement
 
     //鼠标滚动或者滑动条滑动时，标题改变背景

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e886ec3-1e5f-4728-996f-1f75752f6a7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataCollection" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.js" afterPath="$PROJECT_DIR$/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/hamburger.js" afterPath="$PROJECT_DIR$/public/js/hamburger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/aside.jade" afterPath="$PROJECT_DIR$/views/includes/aside.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/header.jade" afterPath="$PROJECT_DIR$/views/includes/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/knowledgeSystem.jade" afterPath="$PROJECT_DIR$/views/pages/knowledgeSystem.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/video.jade" afterPath="$PROJECT_DIR$/views/pages/video.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/header.js" afterPath="$PROJECT_DIR$/public/js/header.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,13 +20,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6298799">
+    <splitter split-orientation="horizontal" split-proportion="0.4159159">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/routes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
+                <state relative-caret-position="29">
                   <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
                   <folding />
                 </state>
@@ -59,7 +53,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hamburger.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="hamburger.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/hamburger.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="261">
@@ -73,11 +67,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="header.jade" pinned="false" current-in-tab="true">
+          <file leaf-file-name="header.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/includes/header.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-145">
-                  <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+                <state relative-caret-position="261">
+                  <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/js/header.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="232">
+                  <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -96,8 +100,8 @@
           <file leaf-file-name="aside.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/includes/aside.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+                <state relative-caret-position="148">
+                  <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -150,7 +154,6 @@
         <option value="$PROJECT_DIR$/schemas/schema.js" />
         <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/header.css" />
-        <option value="$PROJECT_DIR$/public/js/header.js" />
         <option value="$PROJECT_DIR$/models/comment.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/comment.css" />
         <option value="$PROJECT_DIR$/views/includes/comment.jade" />
@@ -184,9 +187,10 @@
         <option value="$PROJECT_DIR$/views/pages/knowledgeSystem.jade" />
         <option value="$PROJECT_DIR$/views/pages/video.jade" />
         <option value="$PROJECT_DIR$/views/includes/aside.jade" />
-        <option value="$PROJECT_DIR$/public/js/hamburger.js" />
         <option value="$PROJECT_DIR$/views/includes/header.jade" />
         <option value="$PROJECT_DIR$/config/routes.js" />
+        <option value="$PROJECT_DIR$/public/js/hamburger.js" />
+        <option value="$PROJECT_DIR$/public/js/header.js" />
       </list>
     </option>
   </component>
@@ -236,8 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,6 +350,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,7 +508,8 @@
       <workItem from="1487233087818" duration="2350000" />
       <workItem from="1487254170581" duration="2484000" />
       <workItem from="1487294114135" duration="4126000" />
-      <workItem from="1487336997350" duration="3325000" />
+      <workItem from="1487336997350" duration="3516000" />
+      <workItem from="1487420534044" duration="2228000" />
     </task>
     <task id="LOCAL-00001" summary="static">
       <created>1484232540350</created>
@@ -695,11 +700,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487256923963</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="bug">
+      <created>1487341326693</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1487341326693</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185247000" />
+    <option name="totallyTimeSpent" value="187666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -731,7 +743,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="concept" />
     <MESSAGE value="more&#10;" />
     <MESSAGE value="1" />
     <MESSAGE value="video&amp;doc" />
@@ -756,7 +767,8 @@
     <MESSAGE value="test resource save" />
     <MESSAGE value="routes" />
     <MESSAGE value="luyou" />
-    <option name="LAST_COMMIT_MESSAGE" value="luyou" />
+    <MESSAGE value="bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -943,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1061,6 +1066,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/res-in.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/aside.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1073,42 +1108,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/res-in.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/aside.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/header.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="261">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.js">
+    <entry file="file://$PROJECT_DIR$/public/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        <state relative-caret-position="232">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
