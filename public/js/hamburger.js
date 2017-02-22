@@ -6,7 +6,7 @@ if (hamburgers.length > 0) {
         hamburger.addEventListener("click", function() {
              this.classList.toggle("is-active");
              this.parentNode.classList.toggle("active");
-             console.log(this.parentNode,this.nextSibling);
+             //console.log(this.parentNode,this.nextSibling);
              this.nextElementSibling.classList.toggle("active");
         }, false);
     });

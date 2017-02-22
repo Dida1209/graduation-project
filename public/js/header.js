@@ -5,14 +5,20 @@
     let header=document.getElementById("head");
     let logo=document.getElementById("logo");
 
-    let par=header.childNodes.item(2);
-    console.log(par);
+    let resources=header.children.item(1).children;
+    console.log(resources);
 
     let alist=document.querySelectorAll(".item-list");
     forEach(alist,function(a){
         a.addEventListener("click",function(e){
-            // forEach()
-            console.log(this,e.target);
+            let target=e.target;
+            forEach(resources,function(resource){
+                let resChild=resource.lastChild;
+                let href=resChild.href;
+                resource.lastChild.href=href.substring(0,href.lastIndexOf('/')+1)+target.getAttribute('index');
+                console.log(resource.lastChild);
+            })
+            //console.log(this,target.getAttribute('index'));
         })
     })
     //let resource=document.getElement
